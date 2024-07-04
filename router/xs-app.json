@@ -1,16 +1,23 @@
 {
     "welcomeFile": "/index.html",
+    "authenticationMethod": "route",
     "routes": [
         {
-            "source": "^/api(.*)$",
+            "source": "/user-info/(.*)",
+            "destination": "srv-api",
+            "csrfProtection": true,
+            "authenticationType": "xsuaa"
+        },
+        {
+            "source": "^/user-api(.*)",
             "target": "$1",
-            "destination": "api",
-            "csrfProtection": false
+            "service": "sap-approuter-userapi"
         },
         {
             "source": "^/(.*)$",
             "target": "$1",
-            "localDir": "./dist"
+            "localDir": "./dist",
+            "authenticationType": "xsuaa"
         }
     ]
 }

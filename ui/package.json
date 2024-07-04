@@ -32,5 +32,10 @@
     "eslint-plugin-react-refresh": "^0.4.5",
     "typescript": "^5.3.3",
     "vite": "^4.5.1"
+  },
+  "cds": {
+    "requires": {
+      "auth": "jwt"
+    }
   }
 }

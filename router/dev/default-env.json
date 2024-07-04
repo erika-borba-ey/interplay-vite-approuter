@@ -1,7 +1,7 @@
 {
   "destinations": [
     {
-      "name": "api",
+      "name": "srv-api",
       "url": "http://localhost:4004",
       "forwardAuthToken": true
     },
@@ -9,5 +9,40 @@
       "name": "vite-dev-server",
       "url": "http://localhost:5173"
     }
-  ]
+  ],
+  "VCAP_SERVICES": {
+    "xsuaa": [
+      {
+        "name": "interplay-vite-approuter",
+        "instance_name": "interplay-vite-approuter-xsuaa",
+        "label": "xsuaa",
+        "tags": [
+          "xsuaa",
+          "endpoint:https://api.cf.us10.hana.ondemand.com",
+          "org:OSDE Org Servicios Directos Empresarios_sap-integration-suite-y97uqswe",
+          "space:TestUserApi"
+        ],
+        "plan": "application",
+        "credentials": {
+          "apiurl": "https://api.authentication.us10.hana.ondemand.com",
+          "clientid": "sb-interplay-vite-approuter!t66731",
+          "clientsecret": "kOS7inqvuwWiJH5rpH3SglQgNDs=",
+          "credential-type": "instance-secret",
+          "identityzone": "sap-integration-suite-y97uqswe",
+          "identityzoneid": "642c69e2-f14b-4b74-8541-38243ea3773a",
+          "sburl": "https://internal-xsuaa.authentication.us10.hana.ondemand.com",
+          "serviceInstanceId": "bd97e383-1c5d-4bfb-8976-f79b0490cf9b",
+          "service_key_name": "key",
+          "subaccountid": "642c69e2-f14b-4b74-8541-38243ea3773a",
+          "tenantid": "642c69e2-f14b-4b74-8541-38243ea3773a",
+          "tenantmode": "dedicated",
+          "uaadomain": "authentication.us10.hana.ondemand.com",
+          "url": "https://sap-integration-suite-y97uqswe.authentication.us10.hana.ondemand.com",
+          "verificationkey": "-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAu1zlLf8VBDW2FxijEe7k\nYl3k+Kj3ZKeS8nTc+I4wtShVSUcfwTWvKSxWU04srIZIEUo/ywvABV2VLgg/pLRA\nr/uLVzEvPsRlP3oJefjpjWb7gboDYHQp8GRmesPtTjsl58wU7ANs3p4tWy7fMRXH\nZ8Nug50CTmEqhkoGL1GIp4xZFXqiMqlgoD4MtbzlFJTahbyIC7zSHpRCUF4tEOEy\nVM88Bkh5/gNdvEpQv4BfKom8h/SkbYdQisbLMjLnEZukoqrCaBvc/O8oqh0r0f7o\nSFRwUZE7adWjCAdMGL2dIPwJTb+Jp3MlhDVrMvZvSxNSCpHxNb/lRZVP45HQ2t2E\nkQIDAQAB\n-----END PUBLIC KEY-----",
+          "xsappname": "interplay-vite-approuter!t66731",
+          "zoneid": "642c69e2-f14b-4b74-8541-38243ea3773a"
+        }
+      }
+    ]
+  }
 }

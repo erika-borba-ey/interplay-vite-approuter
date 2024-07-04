@@ -12,6 +12,7 @@ import {
   ShellBar
 } from '@ui5/webcomponents-react';
 import { useState } from 'react';
+import UserInfo from './UserInfo';
 
 function App() {
   const [inputVal, setInputVal] = useState('');
@@ -36,6 +37,7 @@ function App() {
         <Input placeholder="Hello World" onInput={handleInput} value={inputVal} />
         <Label>{inputVal}</Label>
       </FlexBox>
+      <UserInfo/>
     </>
   );
 }
